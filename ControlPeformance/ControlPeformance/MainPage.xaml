@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             xmlns:local="clr-namespace:ControlPeformance"
+           
+             x:Class="ControlPeformance.MainPage">
+    <Grid RowDefinitions="*,Auto">
+        <ContentView x:Name="contentView" WidthRequest="240" BackgroundColor="LightGray">
+            <Grid RowDefinitions="*,Auto">
+                <Grid BackgroundColor="Aquamarine"  x:Name="grid1" IsVisible="false" RowSpacing="1" ColumnSpacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                           <ColumnDefinition Width="80"/>
+                           <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+
+                        <local:CustomControl Grid.Row="0" Grid.Column="0"  HeightRequest="100" WidthRequest="100" />
+                        <local:CustomControl Grid.Row="0" Grid.Column="1"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="0" Grid.Column="2"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="1" Grid.Column="0"  HeightRequest="100" WidthRequest="100" />
+                        <local:CustomControl Grid.Row="1" Grid.Column="1"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="1" Grid.Column="2"  HeightRequest="100" WidthRequest="100" />
+                        <local:CustomControl Grid.Row="2" Grid.Column="0"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="2" Grid.Column="1"  HeightRequest="100" WidthRequest="100" />
+                        <local:CustomControl Grid.Row="2" Grid.Column="2"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="3" Grid.Column="0"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="3" Grid.Column="1"  HeightRequest="100" WidthRequest="100"  />
+                        <local:CustomControl Grid.Row="3" Grid.Column="2"  HeightRequest="100" WidthRequest="100"  />
+                    </Grid>
+                    <Grid Grid.Row="0" x:Name="busyIndicatorGrid" IsVisible="false" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Sample Loading..."/>
+                    </Grid>
+             </Grid>
+
+        </ContentView>
+
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25" Grid.Row="1" >
+
+            <Button
+                x:Name="TransferOutClicked"
+                Text="Show content right side translationx" 
+               
+                Clicked="TransferOutClicked_Clicked"
+                HorizontalOptions="Fill" />
+
+            <Button x:Name="TransferTo0" Text="Show Content 0 translationx"
+            Clicked="TransferTo0_Clicked"/>
+        </VerticalStackLayout>
+    </Grid>
+
+   
+    
+
+
+   
+
+   
+
+
+</ContentPage>
